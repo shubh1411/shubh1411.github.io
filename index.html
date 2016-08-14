@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Sugar</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+		#pic {
+			background: url(./sunanda.jpg) no-repeat fixed;		
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="pic"><div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<strong><span class="keyword">Hey there Sugar!</span><br />
+				<span class="comments">Just another chance to wish you the happiest moments of your life. And surely to remind you how can you have these! <br /><br />For the beginning, just know that you are simply more than any perfection existing. The word <span class="keyword">'Flawless'</span> never overrates you. So for anything this world needs, you fill the void. For I know the worth, So should you, And you'll be cheered like you have never been. As of me, I dearly wish this comes to your mind soon and you stop trying to change yourself. Your over possesive self is gorgeous for many eyes around. The way you live demands adoration. Ask me, how much i've adored, in the best and the worst of you, and it was always worth it. Always!!!<br /><span class="keyword">Sugar,</span> You're Beautiful!! Just know that and no other reason will better <span class="keyword">cheer your smile.</span> </span><br /><br />
+				<span class="keyword" style="font-size:19">- A Very Happy Birthday :)</span></strong></div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+			</div>
+		</div>
+	</div></div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() ;
+		var offsetY = $("#loveHeart").height() *3/ 4 - 55;
+		var together = new Date();
+		together.setFullYear(2010, 10, 2);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				<!--startHeartAnimation();-->
+			}, 5);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 5000);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+<audio src="./music/song.mp3" autoplay="autoplay" loop="3" />
+</body>
+</html>
